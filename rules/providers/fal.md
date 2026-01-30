@@ -11,9 +11,8 @@ metadata:
 Use fal for image and video generation.
 
 ### Auth
-Environment variables:
-- `FAL_KEY` (preferred)
-- `FAL_API_KEY` (common alias)
+Environment variable:
+- `FAL_API_KEY`
 
 ### Models (initial)
 Image:

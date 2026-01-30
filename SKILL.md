@@ -140,7 +140,7 @@ If you want to automate execution, implement the pipeline in your own agent work
 ## Environment Variables
 
 ```bash
-export FAL_KEY="your_fal_key"
+export FAL_API_KEY="your_fal_key"
 export ELEVENLABS_API_KEY="your_elevenlabs_key"
 export OPENAI_API_KEY="your_openai_key"  # for LLM tasks
 ```
