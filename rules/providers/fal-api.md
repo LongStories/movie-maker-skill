@@ -91,10 +91,12 @@ curl -sS "https://queue.fal.run/$MODEL" \
     image_url: $image_url,
     prompt: "Locked OTS with a slow push-in. Rain trails down the window.",
     duration: "4",
-    resolution: "720p",
+    resolution: "480p",
     aspect_ratio: "16:9",
     generate_audio: false
   }')" > enqueue.json
+
+# For higher quality (more expensive), use: 720p or 1080p
 
 STATUS_URL=$(jq -r '.status_url' enqueue.json)
 RESPONSE_URL=$(jq -r '.response_url' enqueue.json)
@@ -117,13 +119,19 @@ curl -L "$VID_URL" -o shot.mp4
 
 ---
 
-## Seedance duration constraints (important)
+## Seedance constraints (important)
 
-For `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`, the documented supported durations are:
+For `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`:
 
+### Supported durations
 - **4–12 seconds**, integer seconds.
 
-If you need something shorter:
+### Supported resolutions
+- `480p` (cheapest / fastest)
+- `720p` (default)
+- `1080p` (highest quality)
+
+If you need something shorter than 4s:
 - generate **4s** and trim down.
 
 If you need longer than 12s:

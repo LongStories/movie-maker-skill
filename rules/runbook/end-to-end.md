@@ -63,6 +63,16 @@ The agent should end with:
 
 ---
 
+## Step 0 — Ask user what kind of movie + choose a quality mode
+
+Before writing anything, ask:
+- genre / vibe
+- narrator-only vs dialogue
+- aspect ratio (16:9 vs 9:16)
+- **quality mode**: Draft (480p), Standard (720p), HQ (1080p)
+
+Then proceed.
+
 ## Step 0 — Write script + shotlist
 
 Write:

@@ -46,6 +46,9 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 - [rules/style/style-presets.md](rules/style/style-presets.md)
 - [rules/characters/consistency.md](rules/characters/consistency.md)
 
+### Cost/quality
+- [rules/cost/quality-and-cost.md](rules/cost/quality-and-cost.md)
+
 ### Providers
 - [rules/providers/fal.md](rules/providers/fal.md)
 - [rules/providers/fal-api.md](rules/providers/fal-api.md)
