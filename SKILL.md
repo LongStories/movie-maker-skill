@@ -193,21 +193,11 @@ For multiple characters:
 
 ---
 
-## Alternative: Use MovieMaker CLI
+## Note on implementation
 
-There's a full CLI implementation at `moviemaker-ai/`:
+This skill is **docs + rules only**. We intentionally do not ship a bundled pipeline in this repository.
 
-```bash
-cd longstories-open-source/moviemaker-ai
-export FAL_KEY="..."
-export OPENAI_API_KEY="..."
-export ELEVENLABS_API_KEY="..."
-
-node src/cli.js --config examples/config.json --prompt examples/story.txt
-```
-
-Output lands in `runs/<run-id>/` with `movie.mp4`, `captions.srt`, and `manifest.json`.
-
+If you want to automate execution, implement the pipeline in your own agent workspace using the steps above (TTS → timing → images → videos → stitch).
 ---
 
 ## Environment Variables
