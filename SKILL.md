@@ -64,6 +64,8 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 
 ### Runbook
 - [rules/runbook/end-to-end.md](rules/runbook/end-to-end.md)
+- [rules/qa/image-review.md](rules/qa/image-review.md)
+- [rules/qa/video-spotcheck.md](rules/qa/video-spotcheck.md)
 - [rules/troubleshooting/common-errors.md](rules/troubleshooting/common-errors.md)
 
 ### Sharing

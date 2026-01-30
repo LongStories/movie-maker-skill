@@ -138,6 +138,18 @@ See:
 - `rules/providers/fal.md`
 - `rules/image/prompting.md`
 
+### Step 3.5 — Image QA before video (recommended)
+
+Before generating any videos, do a quick QA pass on the images.
+If the agent is multimodal, it should visually inspect each image.
+
+If an image doesn’t match the intent:
+- update the manifest (`shot.imagePrompt` and/or character/style fields)
+- regenerate **only** that image
+
+See:
+- `rules/qa/image-review.md`
+
 ---
 
 ## Step 4 — Generate videos (FAL)
