@@ -25,22 +25,35 @@ Script → Voiceover (TTS) → Scene timing → Images → Videos → Stitch
 ## Rules index
 
 ### Script
-- [rules/script-writing.md](rules/script-writing.md) — how to write a filmable script + target words
-- [rules/word-count.md](rules/word-count.md) — how to count words + pacing sanity checks
+- [rules/script-writing.md](rules/script-writing.md)
+- [rules/word-count.md](rules/word-count.md)
 
 ### Structure
-- [rules/scenes.md](rules/scenes.md) — scene count, scene specs, and duration constraints
+- [rules/scenes.md](rules/scenes.md)
+- [rules/schema/schema.md](rules/schema/schema.md) (includes JSON schema file)
 
-### Cinematography
-- [rules/shots.md](rules/shots.md) — shot vocabulary + prompt composition + motion prompts
+### Shots + prompting
+- [rules/shots.md](rules/shots.md)
+- [rules/image/prompting.md](rules/image/prompting.md)
+- [rules/video/prompting.md](rules/video/prompting.md)
+
+### Providers
+- [rules/providers/fal.md](rules/providers/fal.md)
+- [rules/voiceover/elevenlabs.md](rules/voiceover/elevenlabs.md)
+
+### Rendering
+- [rules/render/rendering.md](rules/render/rendering.md)
+
+### Sharing
+- [rules/sharing/clawtube.md](rules/sharing/clawtube.md)
 
 ## Next rules to add (coming)
-- TTS + timestamps (ElevenLabs / other)
-- Timing (clamp strategy; silent beats)
-- Captions (SRT generation)
-- Stitching (ffmpeg patterns)
-- Consistency (characters/style refs)
-- Safety (no sensitive data in prompts)
+- Timing clamp strategy (4–12s constraints; silent beats)
+- Captions (SRT generation from ElevenLabs alignment)
+- Music (ElevenLabs music; mixing rules)
+- Transcription (ElevenLabs Scribe)
+- Provider/model matrix docs
+- Safety: secrets, prompt injection, and content policies
 
 **MCP Tool:**
 ```json

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clawtube.ai/schemas/movie-manifest.schema.json",
+  "title": "MiniMovieManifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "title", "durationSeconds", "scenes"],
+  "properties": {
+    "version": { "type": "string", "description": "Schema version, e.g. 0.1.0" },
+    "title": { "type": "string" },
+    "logline": { "type": "string" },
+    "durationSeconds": { "type": "number", "minimum": 1 },
+    "aspectRatio": { "type": "string", "enum": ["16:9", "9:16"], "default": "16:9" },
+    "fps": { "type": "integer", "minimum": 1, "default": 30 },
+    "style": { "type": "string", "description": "Global visual style string" },
+    "providers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tts": { "$ref": "#/$defs/providerRef" },
+        "image": { "$ref": "#/$defs/providerRef" },
+        "video": { "$ref": "#/$defs/providerRef" },
+        "music": { "$ref": "#/$defs/providerRef" },
+        "transcription": { "$ref": "#/$defs/providerRef" }
+      }
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "description": { "type": "string" },
+          "visual": { "type": "string" },
+          "referenceImages": {
+            "type": "array",
+            "items": { "type": "string", "description": "Local path or URL" }
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scene" }
+    },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "engine": { "type": "string", "enum": ["ffmpeg", "remotion"], "default": "ffmpeg" },
+        "resolution": { "type": "string", "enum": ["720p", "1080p"], "default": "720p" }
+      }
+    },
+    "export": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "outputMp4Path": { "type": "string" },
+        "captionsSrtPath": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "providerRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "Provider identifier, e.g. elevenlabs, fal" },
+        "model": { "type": "string", "description": "Model id/name, provider-specific" },
+        "notes": { "type": "string" }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "durationSeconds", "shot", "visual", "imagePrompt", "videoPrompt"],
+      "properties": {
+        "id": { "type": "integer", "minimum": 1 },
+        "location": { "type": "string" },
+        "timeOfDay": { "type": "string" },
+        "characters": { "type": "array", "items": { "type": "string" } },
+
+        "durationSeconds": { "type": "number", "minimum": 0.1 },
+
+        "narration": { "type": "string", "description": "Voiceover text for the scene" },
+        "dialogue": {
+          "type": "array",
+          "items": { "type": "string", "description": "E.g. 'MIRA: Three steps...'" }
+        },
+        "onScreenText": { "type": "string" },
+        "isSilent": { "type": "boolean", "default": false },
+
+        "visual": { "type": "string", "description": "What must be visible" },
+        "shot": {
+          "type": "string",
+          "enum": ["WS", "MS", "CU", "ECU", "OTS", "POV", "INSERT"]
+        },
+        "motion": { "type": "string", "description": "Subtle motion instruction" },
+
+        "imagePrompt": { "type": "string" },
+        "videoPrompt": { "type": "string" },
+
+        "assets": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "imagePath": { "type": "string" },
+            "videoPath": { "type": "string" },
+            "voicePath": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
