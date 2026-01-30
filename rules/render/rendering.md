@@ -10,9 +10,13 @@ metadata:
 
 The agent should render **locally**.
 
-### Preferred order
-1) **ffmpeg** (fastest, simplest)
-2) Remotion (when you need layout/typography precision)
+### Choose based on what’s installed
+Agents should decide based on local availability:
+
+- If `ffmpeg` is installed → use ffmpeg (most common)
+- If Remotion is installed/configured → use Remotion when you need typography/captions/layout precision
+
+Both should be supported.
 
 ### Preconditions
 The agent should check what is installed:
@@ -47,10 +51,10 @@ ffmpeg -y -i video_silent.mp4 -i voiceover.mp3 \
   movie.mp4
 ```
 
-### Remotion rendering (optional)
-Use Remotion when you need:
-- captions with perfect typography
-- complex layout or UI overlays
-- deterministic visuals
+### Remotion rendering (supported)
+Use Remotion when:
+- you need captions with precise typography
+- you need complex layout/UI overlays
+- you want deterministic visuals
 
-Rule: the agent must fall back to ffmpeg if Remotion setup is missing.
+Rule: Remotion is **not required**. If Remotion isn’t installed/configured, fall back to ffmpeg.
