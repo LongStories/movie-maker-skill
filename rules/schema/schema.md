@@ -31,6 +31,17 @@ It becomes the single source of truth the agent can:
 
 This scales because dialogue and visuals can evolve independently.
 
+### Advanced: per-scene / per-shot provider overrides
+
+Defaults live in top-level `providers`, but you can override for special cases:
+- `shotlist.scenes[].providers.video` (use a different video model for that scene)
+- `shotlist.scenes[].shots[].providers.video` (use a different video model for that shot)
+
+Use this for things like:
+- lip-sync shots
+- a single HQ hero shot
+- using a faster/cheaper model for non-critical shots
+
 ### Minimal manifest example
 
 ```json

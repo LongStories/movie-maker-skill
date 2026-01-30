@@ -158,6 +158,19 @@
 
         "plannedDurationSeconds": { "type": "number", "minimum": 0 },
 
+        "providers": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Optional per-scene provider/model overrides.",
+          "properties": {
+            "voiceover": { "$ref": "#/$defs/providerRef" },
+            "image": { "$ref": "#/$defs/providerRef" },
+            "video": { "$ref": "#/$defs/providerRef" },
+            "music": { "$ref": "#/$defs/providerRef" },
+            "transcription": { "$ref": "#/$defs/providerRef" }
+          }
+        },
+
         "shots": {
           "type": "array",
           "minItems": 1,
@@ -177,6 +190,19 @@
         "lineRefs": {
           "type": "array",
           "items": { "type": "string", "pattern": "^L\\d{3}$" }
+        },
+
+        "providers": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Optional per-shot provider/model overrides (advanced).",
+          "properties": {
+            "voiceover": { "$ref": "#/$defs/providerRef" },
+            "image": { "$ref": "#/$defs/providerRef" },
+            "video": { "$ref": "#/$defs/providerRef" },
+            "music": { "$ref": "#/$defs/providerRef" },
+            "transcription": { "$ref": "#/$defs/providerRef" }
+          }
         },
 
         "visual": { "type": "string" },

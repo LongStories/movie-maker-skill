@@ -74,6 +74,9 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 ## Examples
 - `examples/shipped/` (script + shotlist + manifest)
 
+### Advanced
+- [rules/advanced/overrides.md](rules/advanced/overrides.md) (per-scene/per-shot model overrides)
+
 ## Next rules to add
 - Music (ElevenLabs music + mixing)
 - Provider/model matrix docs
