@@ -35,6 +35,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 
 ### Timing
 - [rules/timing/from-timestamps.md](rules/timing/from-timestamps.md)
+- [rules/timing/map-lines-to-timestamps.md](rules/timing/map-lines-to-timestamps.md)
 - [rules/timing/clamp-and-trim.md](rules/timing/clamp-and-trim.md)
 
 ### Prompting
