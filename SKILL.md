@@ -7,116 +7,40 @@ metadata:
 
 # Mini Movie Skill
 
-Create short AI movies (10-60s) with synchronized voiceover. **Voiceover-first** ensures perfect audio-visual sync.
+This is a **docs-first AgentSkill**.
+
+- `SKILL.md` is the index.
+- `rules/` holds the reusable, bite-sized rules the agent should consult.
 
 ## When to use
 
-Use when creating a short movie with narration or dialogue from a script.
+Use when you want an agent to generate a 10–60s mini-movie with narration/dialogue and synced visuals.
 
-## Pipeline (Voiceover-First)
-
-```
-1. Script → 2. Voiceover (TTS) → 3. Scene Timing → 4. Images → 5. Videos → 6. Stitch
-```
-
-**Critical:** Generate voiceover FIRST to know exact timing, then match visuals to audio.
-
----
-
-## Step 1: Write Script
-
-Break into lines/sentences. Each line = one scene.
+## Core pipeline (voiceover-first)
 
 ```
-NARRATOR: The old radio crackled to life after forty years of silence.
-ELENA: Father? Can you hear me? I found it.
-MARCUS: Elena, step away from that console.
+Script → Voiceover (TTS) → Scene timing → Images → Videos → Stitch
 ```
 
----
+## Rules index
 
-## Step 2: Generate Voiceover with Timestamps
+### Script
+- [rules/script-writing.md](rules/script-writing.md) — how to write a filmable script + target words
+- [rules/word-count.md](rules/word-count.md) — how to count words + pacing sanity checks
 
-Use ElevenLabs TTS with timestamps endpoint. Different voice IDs for different characters.
+### Structure
+- [rules/scenes.md](rules/scenes.md) — scene count, scene specs, and duration constraints
 
-**Common Voice IDs:**
-- `N2lVS1w4EtoT3dr4eOWO` - Callum (deep male narrator)
-- `EXAVITQu4vr4xnSDxMaL` - Bella (young female)
-- `ErXwobaYiN019PkySvjV` - Antoni (older male)
+### Cinematography
+- [rules/shots.md](rules/shots.md) — shot vocabulary + prompt composition + motion prompts
 
-**API Call (per line):**
-```bash
-curl -sS "https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}/with-timestamps" \
-  -H "xi-api-key: $ELEVENLABS_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "text": "Your line here.",
-    "model_id": "eleven_turbo_v2_5",
-    "voice_settings": {"stability": 0.5, "similarity_boost": 0.75}
-  }' --output line_N.json
-```
-
-**Extract audio:**
-```bash
-cat line_N.json | jq -r '.audio_base64' | base64 -d > audio_N.mp3
-```
-
-**Get duration:**
-```bash
-ffprobe -v quiet -show_format audio_N.mp3 | grep duration
-```
-
-**Concatenate all lines:**
-```bash
-echo "file 'audio_1.mp3'
-file 'audio_2.mp3'
-..." > audio_concat.txt
-ffmpeg -y -f concat -safe 0 -i audio_concat.txt -c copy voiceover.mp3
-```
-
----
-
-## Step 3: Calculate Scene Durations
-
-Map each line's audio duration to a video duration (Seedance supports 4-12 sec).
-
-```
-Line 1: 4.27s audio → 4s video
-Line 2: 5.12s audio → 5s video
-Line 3: 3.95s audio → 4s video (minimum 4s)
-```
-
----
-
-## Step 4: Generate Images (Seedream 4.5)
-
-**Model:** `fal-ai/bytedance/seedream/v4.5/text-to-image`
-
-**MCP Tool:**
-```json
-{
-  "model": "fal-ai/bytedance/seedream/v4.5/text-to-image",
-  "parameters": {
-    "prompt": "Cinematic shot of [SUBJECT], [ACTION], [SETTING], 35mm film grain, 16:9",
-    "image_size": "landscape_16_9",
-    "seed": 100
-  },
-  "queue": true
-}
-```
-
-**Prompt Template:**
-```
-Cinematic [SHOT TYPE] of [SUBJECT], [ACTION/EMOTION], [SETTING], [LIGHTING], 35mm film grain, rich contrast, [MOOD], 16:9 aspect ratio
-```
-
-Generate all images in parallel, then poll for results.
-
----
-
-## Step 5: Generate Videos (Seedance v1.5 Pro)
-
-**Model:** `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`
+## Next rules to add (coming)
+- TTS + timestamps (ElevenLabs / other)
+- Timing (clamp strategy; silent beats)
+- Captions (SRT generation)
+- Stitching (ffmpeg patterns)
+- Consistency (characters/style refs)
+- Safety (no sensitive data in prompts)
 
 **MCP Tool:**
 ```json
