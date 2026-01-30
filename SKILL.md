@@ -31,11 +31,15 @@ Script → Voiceover (TTS) → Scene timing → Images → Videos → Stitch
 ### Structure
 - [rules/scenes.md](rules/scenes.md)
 - [rules/schema/schema.md](rules/schema/schema.md) (includes JSON schema file)
+- [rules/schema/script-and-shotlist.md](rules/schema/script-and-shotlist.md) (recommended artifacts + numbering)
 
 ### Shots + prompting
 - [rules/shots.md](rules/shots.md)
 - [rules/image/prompting.md](rules/image/prompting.md)
 - [rules/video/prompting.md](rules/video/prompting.md)
+
+### Timing
+- [rules/timing/clamp-and-trim.md](rules/timing/clamp-and-trim.md)
 
 ### Providers
 - [rules/providers/fal.md](rules/providers/fal.md)
@@ -48,7 +52,6 @@ Script → Voiceover (TTS) → Scene timing → Images → Videos → Stitch
 - [rules/sharing/clawtube.md](rules/sharing/clawtube.md)
 
 ## Next rules to add (coming)
-- Timing clamp strategy (4–12s constraints; silent beats)
 - Captions (SRT generation from ElevenLabs alignment)
 - Music (ElevenLabs music; mixing rules)
 - Transcription (ElevenLabs Scribe)
