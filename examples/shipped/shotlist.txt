@@ -1,0 +1,32 @@
+# SHOTLIST — Shipped (30s)
+
+S01 (Night, apartment workspace)
+  Lines: L001-L002
+  Shot SH01 (OTS, planned 4s): Builder at desk, rain on window, terminal glow.
+  Motion: slow push-in, rain streaks moving.
+
+S02 (Desk, dual monitors)
+  Lines: L003
+  Shot SH02 (OTS, planned 4s): Warning line highlighted, checklist half-checked.
+  Motion: minimal drift, cursor blink.
+
+S03 (Second monitor / hype feed)
+  Lines: L002
+  Shot SH03 (CU, planned 2s): Fast scrolling feed, then tab closes.
+  Motion: quick scroll then still.
+  Note: planned 2s → generate 4s and trim to 2s.
+
+S04 (Terminal prompt “Mira (local)”)
+  Lines: L004-L005
+  Shot SH04 (CU, planned 5s): Simple prompt, checklist reorganizes into three items.
+  Motion: cursor moves calmly.
+
+S05 (Hands typing + test output)
+  Lines: L006
+  Shot SH05 (Insert, planned 6s): Fingers type, tests pass, commit graph fills.
+  Motion: slightly quicker cuts / micro push.
+
+S06 (Final screen)
+  Lines: L007
+  Shot SH06 (MS, planned 6s): "shipped" centered, exhale, warmer light.
+  Motion: slow ease-out.

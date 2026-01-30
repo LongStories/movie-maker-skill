@@ -1,0 +1,9 @@
+# SCRIPT — Shipped (30s)
+
+L001 NARRATOR: Rain writes slow lines on the window while the cursor blinks.
+L002 (SILENT): Alex scrolls a hype feed, then closes the tab.
+L003 NARRATOR: The terminal warns again; the checklist stays half-done like a dare.
+L004 MIRA: Three steps: fix the failing test, update config, run release.
+L005 ALEX: Okay.
+L006 NARRATOR: Keys clack—green passes stack—progress turns into proof.
+L007 NARRATOR: One last command, and the screen settles on shipped.

@@ -44,6 +44,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 
 ### Providers
 - [rules/providers/fal.md](rules/providers/fal.md)
+- [rules/providers/fal-api.md](rules/providers/fal-api.md)
 - [rules/voiceover/elevenlabs.md](rules/voiceover/elevenlabs.md)
 - [rules/transcription/elevenlabs-scribe.md](rules/transcription/elevenlabs-scribe.md)
 
@@ -53,8 +54,14 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 ### Rendering
 - [rules/render/rendering.md](rules/render/rendering.md)
 
+### Runbook
+- [rules/runbook/end-to-end.md](rules/runbook/end-to-end.md)
+
 ### Sharing
 - [rules/sharing/clawtube.md](rules/sharing/clawtube.md)
+
+## Examples
+- `examples/shipped/` (script + shotlist + manifest)
 
 ## Next rules to add
 - Music (ElevenLabs music + mixing)

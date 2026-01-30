@@ -1,0 +1,160 @@
+{
+  "version": "0.2.0",
+  "title": "Shipped",
+  "logline": "A solo builder turns doubt into momentum and ships.",
+  "targetDurationSeconds": 30,
+  "aspectRatio": "16:9",
+  "fps": 24,
+  "style": "cinematic, modern tech noir, 35mm film grain, rain reflections, rich contrast",
+  "providers": {
+    "voiceover": { "name": "elevenlabs", "model": "eleven_turbo_v2_5" },
+    "image": { "name": "fal", "model": "fal-ai/bytedance/seedream/v4.5/edit" },
+    "video": { "name": "fal", "model": "fal-ai/bytedance/seedance/v1.5/pro/image-to-video" }
+  },
+  "characters": [
+    {
+      "name": "Alex",
+      "role": "solo builder",
+      "visual": "young adult, tired eyes, dark hoodie, slightly hunched posture"
+    },
+    {
+      "name": "Mira",
+      "role": "local assistant",
+      "visual": "no avatar; plain terminal prompt labeled Mira (local)"
+    }
+  ],
+  "script": {
+    "lines": [
+      { "id": "L001", "kind": "voiceover", "speaker": "NARRATOR", "text": "Rain writes slow lines on the window while the cursor blinks." },
+      { "id": "L002", "kind": "silent", "text": "Alex scrolls a hype feed, then closes the tab." },
+      { "id": "L003", "kind": "voiceover", "speaker": "NARRATOR", "text": "The terminal warns again; the checklist stays half-done like a dare." },
+      { "id": "L004", "kind": "dialogue", "speaker": "MIRA", "text": "Three steps: fix the failing test, update config, run release." },
+      { "id": "L005", "kind": "dialogue", "speaker": "ALEX", "text": "Okay." },
+      { "id": "L006", "kind": "voiceover", "speaker": "NARRATOR", "text": "Keys clack—green passes stack—progress turns into proof." },
+      { "id": "L007", "kind": "voiceover", "speaker": "NARRATOR", "text": "One last command, and the screen settles on shipped." }
+    ]
+  },
+  "shotlist": {
+    "scenes": [
+      {
+        "id": "S01",
+        "location": "Apartment workspace",
+        "timeOfDay": "Night",
+        "characters": ["Alex"],
+        "lineRefs": ["L001", "L002"],
+        "shots": [
+          {
+            "id": "SH01",
+            "shotType": "OTS",
+            "visual": "Builder at desk by rain-streaked window; terminal glow; warm desk lamp",
+            "motion": "Slow push-in; rain streaks moving",
+            "plannedDurationSeconds": 4,
+            "generateDurationSeconds": 4,
+            "imagePrompt": "Cinematic OTS of a solo builder at a cluttered desk by a rain-streaked window at night, warm desk lamp, cool city bokeh, 35mm film grain, rich contrast, 16:9",
+            "videoPrompt": "Locked OTS with a slow push-in. Rain trails down the window. The builder barely shifts posture; cursor blinks."
+          }
+        ]
+      },
+      {
+        "id": "S02",
+        "location": "Desk, dual monitors",
+        "timeOfDay": "Night",
+        "characters": ["Alex"],
+        "lineRefs": ["L003"],
+        "shots": [
+          {
+            "id": "SH02",
+            "shotType": "OTS",
+            "visual": "Highlighted warning line in terminal; checklist half-checked",
+            "motion": "Minimal drift; cursor blinking",
+            "plannedDurationSeconds": 4,
+            "generateDurationSeconds": 4,
+            "imagePrompt": "Cinematic OTS of dual monitors with terminal warnings and a half-checked checklist, warm lamp light, cool screen spill, 35mm grain, 16:9",
+            "videoPrompt": "Slow controlled push-in over shoulder. Terminal warning flashes then stills. Cursor blinks next to an unfinished checklist item."
+          }
+        ]
+      },
+      {
+        "id": "S03",
+        "location": "Second monitor",
+        "timeOfDay": "Night",
+        "characters": ["Alex"],
+        "lineRefs": ["L002"],
+        "shots": [
+          {
+            "id": "SH03",
+            "shotType": "CU",
+            "visual": "Hype feed scrolls fast, then tab closes",
+            "motion": "Fast scroll, then still",
+            "plannedDurationSeconds": 2,
+            "generateDurationSeconds": 4,
+            "trim": { "startSeconds": 0, "durationSeconds": 2 },
+            "imagePrompt": "Cinematic close-up of a monitor showing a fast-scrolling feed of headlines and charts, reflections of rain, moody tech noir, 35mm grain, 16:9",
+            "videoPrompt": "Hold on the monitor as the feed scrolls rapidly upward, then stops. A quick decisive tab close ends the motion."
+          }
+        ]
+      },
+      {
+        "id": "S04",
+        "location": "Terminal window",
+        "timeOfDay": "Night",
+        "characters": ["Alex", "Mira"],
+        "lineRefs": ["L004", "L005"],
+        "shots": [
+          {
+            "id": "SH04",
+            "shotType": "CU",
+            "visual": "Plain prompt labeled Mira (local); checklist reorganizes into three tasks",
+            "motion": "Cursor moves calmly; one item ticks",
+            "plannedDurationSeconds": 5,
+            "generateDurationSeconds": 5,
+            "imagePrompt": "Tight cinematic close-up of a terminal showing a plain prompt labeled 'Mira (local)' and a checklist reorganized into three tasks, warm lamp edge light, cool screen glow, 35mm grain, 16:9",
+            "videoPrompt": "Static close-up. Cursor reorganizes the checklist into three short tasks; one gets checked. Hands relax closer to the keyboard."
+          }
+        ]
+      },
+      {
+        "id": "S05",
+        "location": "Keyboard + terminal",
+        "timeOfDay": "Night",
+        "characters": ["Alex"],
+        "lineRefs": ["L006"],
+        "shots": [
+          {
+            "id": "SH05",
+            "shotType": "INSERT",
+            "visual": "Hands typing; tests pass; commit graph fills",
+            "motion": "Slightly quicker pacing; micro push-in on PASS",
+            "plannedDurationSeconds": 6,
+            "generateDurationSeconds": 6,
+            "imagePrompt": "Cinematic insert shot of hands typing on a worn keyboard, terminal shows green PASS lines and a commit graph filling, warm highlights, cool screen glow, 35mm grain, 16:9",
+            "videoPrompt": "Cut between keys typing and terminal output. PASS lines stack. A commit graph fills segment by segment. Subtle push-in on the first PASS."
+          }
+        ]
+      },
+      {
+        "id": "S06",
+        "location": "Primary monitor",
+        "timeOfDay": "Night",
+        "characters": ["Alex", "Mira"],
+        "lineRefs": ["L007"],
+        "shots": [
+          {
+            "id": "SH06",
+            "shotType": "MS",
+            "visual": "Terminal output centered: shipped; exhale; warmer light",
+            "motion": "Slow ease-out; hold",
+            "plannedDurationSeconds": 6,
+            "generateDurationSeconds": 6,
+            "imagePrompt": "Over-the-shoulder medium shot toward a monitor with clean centered output 'shipped', the builder leans back exhaling, warm desk light lifts shadows, rain bokeh beyond, 35mm grain, 16:9",
+            "videoPrompt": "Hold as the final command completes. The screen settles on 'shipped'. Camera eases back slightly; shoulders drop on an exhale."
+          }
+        ]
+      }
+    ]
+  },
+  "render": {
+    "engine": "ffmpeg",
+    "resolution": "720p"
+  }
+}
