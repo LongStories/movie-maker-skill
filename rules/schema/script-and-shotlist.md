@@ -38,6 +38,7 @@ Rules:
 - Prefix every line with `L###` (zero-padded).
 - Use `(SILENT)` lines for non-voice beats.
 - Keep one sentence per line unless you intentionally want a fast montage.
+- Use a `SPEAKER:` prefix for speakable lines so the agent can parse it into structured fields (`speaker` + `text`) in the JSON manifest.
 
 ## Shot list format (scene → shots)
 
