@@ -1,0 +1,7 @@
+# dependencies
+node_modules
+
+# outputs
+moviemaker-ai/runs
+.moviemaker-ai
+.DS_Store
