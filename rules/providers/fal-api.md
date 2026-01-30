@@ -117,6 +117,29 @@ curl -L "$VID_URL" -o shot.mp4
 
 ---
 
+## Seedance duration constraints (important)
+
+For `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`, the documented supported durations are:
+
+- **4–12 seconds**, integer seconds.
+
+If you need something shorter:
+- generate **4s** and trim down.
+
+If you need longer than 12s:
+- split into multiple shots.
+
+Rule: when in doubt, **round up** to a supported duration and trim.
+
+## Polling progress (UX)
+
+When polling, print status so the user knows it’s working:
+
+```bash
+STATUS=$(jq -r '.status' status.json)
+echo "status=$STATUS" $(date)
+```
+
 ## Operational tips
 
 - Prefer requesting the **minimum supported duration** and trimming down (see `rules/timing/clamp-and-trim.md`).

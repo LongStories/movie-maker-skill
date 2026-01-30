@@ -12,11 +12,24 @@ This repo does **not** ship an executable pipeline. This runbook is the canonica
 
 ### Preconditions (agent must verify)
 
-Environment variables:
-- `FAL_API_KEY`
-- `ELEVENLABS_API_KEY`
+#### API keys
+- `FAL_API_KEY` (fal)
+- `ELEVENLABS_API_KEY` (optional if using direct ElevenLabs; not required if using fal Eleven v3 TTS)
 
-Local tools:
+How to get keys:
+- fal: https://fal.ai/
+- ElevenLabs: https://elevenlabs.io/
+
+#### Loading keys from `.env.local`
+If keys are in a file, source them explicitly (agent shells may not persist state):
+
+```bash
+set -a
+[ -f .env.local ] && source .env.local
+set +a
+```
+
+#### Local tools
 
 ```bash
 command -v ffmpeg
@@ -31,9 +44,17 @@ command -v base64
 Create a working folder (anywhere):
 
 ```bash
-RUN_DIR="./runs/$(date +%Y-%m-%d_%H-%M-%S)"
+RUN_DIR="$(pwd)/runs/$(date +%Y-%m-%d_%H-%M-%S)"
 mkdir -p "$RUN_DIR"/{script,tts,image,video,edit,export}
 ```
+
+Shell state note: many agent environments execute commands in separate shells. Prefer:
+
+```bash
+cd "$RUN_DIR" && <command>
+```
+
+or use absolute paths.
 
 The agent should end with:
 - `export/movie.mp4`
@@ -60,17 +81,24 @@ Tip: Start simple.
 
 Preferred because it makes timing/alignment deterministic.
 
+Choose a provider:
+
+**Option A — Direct ElevenLabs** (default)
+- See `rules/voiceover/elevenlabs.md`
+
+**Option B — fal Eleven v3 TTS** (makes ElevenLabs optional)
+- See `rules/voiceover/fal-elevenlabs.md`
+
 For each line where `kind` is `dialogue` or `voiceover`:
 
-1) Call ElevenLabs `with-timestamps`
-2) Extract mp3 audio
+1) Generate audio with timestamps
+2) Save `tts/line_L###.mp3`
 3) Record duration into `script.lines[].timing.durationSeconds`
 
 See:
-- `rules/voiceover/elevenlabs.md`
 - `rules/timing/map-lines-to-timestamps.md`
 
-Concatenate per-line mp3s to make a single `tts/voiceover.mp3` (optional but recommended for final mux).
+Concatenate per-line mp3s to make a single `tts/voiceover.mp3` (recommended for final mux).
 
 ---
 

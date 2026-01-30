@@ -43,11 +43,14 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 ### Prompting
 - [rules/image/prompting.md](rules/image/prompting.md)
 - [rules/video/prompting.md](rules/video/prompting.md)
+- [rules/style/style-presets.md](rules/style/style-presets.md)
+- [rules/characters/consistency.md](rules/characters/consistency.md)
 
 ### Providers
 - [rules/providers/fal.md](rules/providers/fal.md)
 - [rules/providers/fal-api.md](rules/providers/fal-api.md)
 - [rules/voiceover/elevenlabs.md](rules/voiceover/elevenlabs.md)
+- [rules/voiceover/fal-elevenlabs.md](rules/voiceover/fal-elevenlabs.md) (makes ElevenLabs optional)
 - [rules/transcription/elevenlabs-scribe.md](rules/transcription/elevenlabs-scribe.md)
 
 ### Captions
@@ -58,6 +61,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 
 ### Runbook
 - [rules/runbook/end-to-end.md](rules/runbook/end-to-end.md)
+- [rules/troubleshooting/common-errors.md](rules/troubleshooting/common-errors.md)
 
 ### Sharing
 - [rules/sharing/clawtube.md](rules/sharing/clawtube.md)
