@@ -8,3 +8,8 @@ This repo intentionally ships **no executable pipeline**. The goal is to provide
 
 - `SKILL.md` – skill entrypoint + how to use
 - `rules/` – small, composable guidance files (mirrors Vercel/Remotion patterns)
+- `.env.example` – template for provider keys when you implement a local pipeline
+
+## Environment variables
+
+See: `rules/requirements.md` (capability matrix + required env vars).

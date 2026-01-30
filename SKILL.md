@@ -24,6 +24,8 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 ## Rules index
 
 ### Structure
+- [rules/requirements.md](rules/requirements.md)
+- [rules/assets.md](rules/assets.md)
 - [rules/schema/schema.md](rules/schema/schema.md)
 - [rules/schema/script-and-shotlist.md](rules/schema/script-and-shotlist.md)
 - [rules/scenes.md](rules/scenes.md)
