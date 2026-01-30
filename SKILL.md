@@ -63,6 +63,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 - [rules/render/rendering.md](rules/render/rendering.md)
 
 ### Runbook
+- [rules/runbook/start-here.md](rules/runbook/start-here.md) (canonical intake + execution path)
 - [rules/runbook/end-to-end.md](rules/runbook/end-to-end.md)
 - [rules/qa/image-review.md](rules/qa/image-review.md)
 - [rules/qa/video-spotcheck.md](rules/qa/video-spotcheck.md)

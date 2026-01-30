@@ -29,6 +29,13 @@ set -a
 set +a
 ```
 
+Security rule: **never print full API keys**. If you need to verify they exist:
+
+```bash
+echo "FAL_API_KEY: ${FAL_API_KEY:+set}"
+echo "ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY:+set}"
+```
+
 #### Local tools
 
 ```bash
@@ -63,15 +70,14 @@ The agent should end with:
 
 ---
 
-## Step 0 — Ask user what kind of movie + choose a quality mode
+## Step 0 — Intake (MUST)
 
-Before writing anything, ask:
-- genre / vibe
-- narrator-only vs dialogue
-- aspect ratio (16:9 vs 9:16)
-- **quality mode**: Draft (480p), Standard (720p), HQ (1080p)
+**Do not proceed** until you have either:
+- user answers to the intake questions, or
+- user explicitly confirms defaults.
 
-Then proceed.
+Use the canonical intake template:
+- `rules/runbook/start-here.md`
 
 ## Step 0 — Write script + shotlist
 
