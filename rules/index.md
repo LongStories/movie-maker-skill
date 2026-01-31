@@ -46,6 +46,7 @@ This is the **recommended reading path** for agents. Follow it top-to-bottom.
 
 ## Providers (keep isolated)
 - `rules/providers/defaults.md`
+- `rules/providers/model-presets.md`
 - `rules/providers/fal/overview.md`
 - `rules/providers/fal/api.md`
 - `rules/providers/fal/voiceover-elevenlabs.md`

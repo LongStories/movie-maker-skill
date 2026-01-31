@@ -3,7 +3,7 @@ name: provider-fal
 category: providers
 impact: HIGH
 metadata:
-  tags: fal, providers, image, video
+  tags: fal, providers, image, video, pricing
 ---
 
 ## Provider: fal
@@ -19,9 +19,32 @@ Environment variable:
 Image:
 - `fal-ai/bytedance/seedream/v4.5/text-to-image` (default when you have no reference images)
 - `fal-ai/bytedance/seedream/v4.5/edit` (use when you DO have reference images)
+- `fal-ai/z-image/turbo` (cost-efficient text-to-image for high-volume use)
 
 Video:
 - `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`
+- `fal-ai/bytedance/seedance/v1/pro/fast/image-to-video` (faster, cost-efficient)
+
+### Pricing (fal UI)
+
+Prices can change; verify in the fal UI when budgeting.
+
+Image models:
+- Seedream 4.5 text-to-image: **$0.04 per image**
+- Seedream 4.5 edit: **$0.04 per image**
+- Z-Image Turbo: **$0.005 per megapixel**
+
+Video models:
+- Seedance v1/pro/fast/image-to-video:
+  - Each **1080p 5 second** video costs roughly **$0.243**
+  - For other resolutions: **1 million video tokens = $1.0**
+- Seedance v1.5/pro/image-to-video:
+  - Each **720p 5 second** video **with audio** costs roughly **$0.26**
+  - For other resolutions: **1 million video tokens with audio = $2.4**
+  - Without audio: **1 million video tokens = $1.2**
+
+Token formula (video):
+`tokens = (height x width x FPS x duration) / 1024`
 
 ### When to use text-to-image vs edit
 

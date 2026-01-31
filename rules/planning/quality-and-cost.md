@@ -9,6 +9,7 @@ metadata:
 ## Quality vs cost (defaults)
 
 Agents should proactively offer a quality/cost choice **before generating media**.
+Also ask for a **model preset** (see `rules/providers/model-presets.md`).
 
 Defaults assume the provider mapping in `rules/providers/defaults.md`.
 If you use a different provider (e.g., Mire), map these to the equivalent knobs.

@@ -31,11 +31,12 @@ Ask these in one message:
 5) **Music**: none (default) or background music?
 6) **Style**: pick a preset (cinematic / 3D animated / anime / 2D / photoreal)
 7) **Quality mode**: Draft (480p), Standard (720p), HQ (1080p)
-8) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you'll save to `assets/refs/...`)
+8) **Model preset**: Cheap and Fast (Z-Image Turbo + Seedance v1 fast) or High Quality but Slower (Seedream 4.5 + Seedance 1.5 pro)
+9) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you'll save to `assets/refs/...`)
 
 If the user doesn't answer, propose defaults and ask:
 
-> "If I don't hear back, I'll do 30s, 16:9, narrator-only, 3D animated style, Draft (480p). Confirm?"
+> "If I don't hear back, I'll do 30s, 16:9, narrator-only, 3D animated style, Draft (480p), High Quality but Slower preset. Confirm?"
 
 ### Execute after confirmation
 1) Create a fresh run dir
@@ -95,6 +96,7 @@ Provider-specific guidance lives under `rules/providers/`. All other rules shoul
 
 ### Providers
 - [rules/providers/defaults.md](rules/providers/defaults.md)
+- [rules/providers/model-presets.md](rules/providers/model-presets.md)
 - [rules/providers/fal/overview.md](rules/providers/fal/overview.md)
 - [rules/providers/fal/api.md](rules/providers/fal/api.md)
 - [rules/providers/elevenlabs/voiceover.md](rules/providers/elevenlabs/voiceover.md)

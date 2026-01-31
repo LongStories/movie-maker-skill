@@ -24,6 +24,9 @@ Non-provider rules should remain provider-agnostic, with **one default mapping**
 - **Transcription:** ElevenLabs Scribe  
   See `rules/providers/elevenlabs/transcription.md`
 
+Model combos (image + video) are defined in:
+- `rules/providers/model-presets.md`
+
 ## Switching providers (e.g., Mire)
 
 1) Add docs under `rules/providers/<provider>/`.
