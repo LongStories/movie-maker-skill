@@ -8,8 +8,17 @@ This repo intentionally ships **no executable pipeline**. The goal is to provide
 
 - `SKILL.md` – skill entrypoint + how to use
 - `rules/` – small, composable guidance files (mirrors Vercel/Remotion patterns)
+- `rules/index.md` – ordered discovery path for agents
 - `.env.example` – template for provider keys when you implement a local pipeline
 
 ## Environment variables
 
-See: `rules/requirements.md` (capability matrix + required env vars).
+See: `rules/start/requirements.md` (capability matrix + required env vars).
+
+## Contributing
+
+PRs are welcome. Please read `CONTRIBUTING.md` before opening an issue or pull request.
+
+## License
+
+MIT — see `LICENSE`.

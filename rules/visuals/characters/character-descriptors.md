@@ -17,7 +17,7 @@ For every named character, create a **canonical descriptor string**.
 - **At least 50 words per character** (more is fine).
 - Include concrete, visual, filmable details.
 
-This is a *default rule* — it is ignorable only if you are using **reference images via Seedream edit** for every shot (see `rules/characters/consistency.md`).
+This is a *default rule* — it is ignorable only if you are using **reference images via an image model that supports edits** (default: Seedream edit) for every shot (see `rules/visuals/characters/consistency.md`).
 
 ## Rule 2 — Descriptor checklist (copy/paste)
 Use this template and fill it fully:

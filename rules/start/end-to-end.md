@@ -13,8 +13,11 @@ This repo does **not** ship an executable pipeline. This runbook is the canonica
 ### Preconditions (agent must verify)
 
 #### API keys
+Defaults require:
 - `FAL_API_KEY` (fal)
 - `ELEVENLABS_API_KEY` (optional if using direct ElevenLabs; not required if using fal Eleven v3 TTS)
+
+If you swap providers, update this list based on `rules/providers/defaults.md`.
 
 How to get keys:
 - fal: https://fal.ai/
@@ -78,15 +81,15 @@ The agent should end with:
 - user explicitly confirms defaults.
 
 Use the canonical intake template:
-- `rules/runbook/start-here.md`
+- `rules/start/start-here.md`
 
 ## Step 0 — Write script + shotlist
 
 Write:
-- `script/script.txt` using numbered lines (`L001…`) (see `rules/schema/script-and-shotlist.md`)
+- `script/script.txt` using numbered lines (`L001…`) (see `rules/manifest/script-and-shotlist.md`)
 - `script/shotlist.txt` with scenes (`S01…`) referencing line ranges
 
-Then convert these into a single `manifest.json` matching `rules/schema/movie-manifest.schema.json`.
+Then convert these into a single `manifest.json` matching `rules/manifest/movie-manifest.schema.json`.
 
 Tip: Start simple.
 - 30s movie → 6 scenes
@@ -101,10 +104,10 @@ Preferred because it makes timing/alignment deterministic.
 Choose a provider:
 
 **Option A — Direct ElevenLabs** (default)
-- See `rules/voiceover/elevenlabs.md`
+- See `rules/providers/elevenlabs/voiceover.md`
 
 **Option B — fal Eleven v3 TTS** (makes ElevenLabs optional)
-- See `rules/voiceover/fal-elevenlabs.md`
+- See `rules/providers/fal/voiceover-elevenlabs.md`
 
 For each line where `kind` is `dialogue` or `voiceover`:
 
@@ -119,7 +122,7 @@ Concatenate per-line audio to make a single `tts/voiceover.mp3` (recommended for
 
 **Important:** add pauses/room tone between voiced lines so pacing doesn’t feel rushed.
 See:
-- `rules/voiceover/pauses-and-roomtone.md`
+- `rules/audio/pauses-and-roomtone.md`
 
 ---
 
@@ -139,15 +142,15 @@ See:
 
 ---
 
-## Step 3 — Generate images (FAL)
+## Step 3 — Generate images (default provider)
 
 For each shot:
-- generate an image using Seedream
+- generate an image using the default image provider
 - save to `image/SHxx.jpg`
 
 See:
-- `rules/providers/fal.md`
-- `rules/image/prompting.md`
+- `rules/providers/fal/overview.md`
+- `rules/visuals/image-prompting.md`
 
 ### Step 3.5 — Image QA before video (recommended)
 
@@ -163,10 +166,10 @@ See:
 
 ---
 
-## Step 4 — Generate videos (FAL)
+## Step 4 — Generate videos (default provider)
 
 For each shot:
-- generate video using Seedance from the image
+- generate video using the default video provider from the image
 - request `generateDurationSeconds`
 - save to `video/SHxx.mp4`
 
@@ -174,7 +177,7 @@ If trimming is required:
 - trim into `edit/SHxx.trim.mp4`
 
 See:
-- `rules/video/prompting.md`
+- `rules/visuals/video-prompting.md`
 - `rules/timing/clamp-and-trim.md`
 
 ---
@@ -196,7 +199,7 @@ If the user wants background music, generate a music bed and mix it under the vo
 Rule: Music is **optional by default** and must be **skipped** if the user asks for silence or maximum dialogue clarity.
 
 See:
-- `rules/music/elevenlabs.md`
+- `rules/providers/elevenlabs/music.md`
 
 ---
 
@@ -206,7 +209,7 @@ If you have word timestamps:
 - generate `export/captions.srt`
 
 See:
-- `rules/captions/srt.md`
+- `rules/audio/captions-srt.md`
 
 ---
 

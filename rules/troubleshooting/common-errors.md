@@ -8,6 +8,8 @@ metadata:
 
 ## Common errors + fixes
 
+These are for the **default providers** (see `rules/providers/defaults.md`). If you swap providers, use their equivalent error docs.
+
 ### fal queue API
 - **401/403**: invalid `FAL_API_KEY` → verify key and header: `Authorization: Key $FAL_API_KEY`
 - **429**: rate limited → exponential backoff (sleep 2, 4, 8…)

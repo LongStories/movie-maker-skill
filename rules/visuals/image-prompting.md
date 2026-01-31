@@ -3,7 +3,7 @@ name: image-prompting
 category: image
 impact: HIGH
 metadata:
-  tags: image, prompting, seedream, consistency
+  tags: image, prompting, consistency
 ---
 
 ## Image prompting rules
@@ -19,7 +19,7 @@ Start prompts with the shot type (WS/MS/CU/OTS/etc.).
 ### Consistency recipe
 To keep characters consistent across scenes:
 - keep a stable character description string
-- optionally supply reference images (seedream edit)
+- optionally supply reference images (if supported; default: Seedream edit)
 
 ### Prompt template
 

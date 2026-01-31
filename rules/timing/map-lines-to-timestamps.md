@@ -11,10 +11,10 @@ metadata:
 Goal: populate `script.lines[].timing.{startSeconds,endSeconds,durationSeconds}` so shots/scenes can be timed deterministically.
 
 ### Preferred approach (recommended): **TTS per line**
-If you generate voiceover **one script line at a time** using ElevenLabs `with-timestamps`, mapping is trivial and reliable.
+If you generate voiceover **one script line at a time** using a TTS provider that returns word-level timestamps (default: ElevenLabs `with-timestamps`), mapping is trivial and reliable.
 
 Workflow:
-1) For each speakable line (`kind: dialogue|voiceover`), call ElevenLabs `with-timestamps` using that line’s text.
+1) For each speakable line (`kind: dialogue|voiceover`), call your TTS provider's word-timestamp endpoint (default: ElevenLabs `with-timestamps`) using that line's text.
 2) Compute the line’s duration from:
    - the returned alignment timestamps (preferred), or
    - `ffprobe` of the per-line mp3.
@@ -27,7 +27,7 @@ Rule:
 This method avoids any need for speech-to-text and is robust to transcription errors.
 
 ### Alternative approach: STT transcript → align to lines (use only if you must)
-If you only have **one combined audio file** and a word-level transcript with timestamps (e.g. ElevenLabs Scribe words with `start`/`end`), align it to the script sequentially.
+If you only have **one combined audio file** and a word-level transcript with timestamps (default: ElevenLabs Scribe words with `start`/`end`), align it to the script sequentially.
 
 #### Alignment rules
 - Normalize both transcript and script:

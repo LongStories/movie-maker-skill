@@ -3,7 +3,7 @@ name: video-prompting
 category: video
 impact: HIGH
 metadata:
-  tags: video, prompting, seedance, motion
+  tags: video, prompting, motion, image-to-video
 ---
 
 ## Video prompting rules

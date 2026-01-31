@@ -21,7 +21,7 @@ Skip music if:
 - `ELEVENLABS_API_KEY`
 
 See also:
-- `rules/requirements.md`
+- `rules/start/requirements.md`
 
 ## Creative control / override rule
 Default behavior:

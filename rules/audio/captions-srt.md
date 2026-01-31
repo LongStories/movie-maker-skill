@@ -10,8 +10,8 @@ metadata:
 
 ### Source of truth
 Use **word-level timestamps** from:
-- ElevenLabs `with-timestamps` output (preferred for generated voiceover)
-- or ElevenLabs Scribe word timestamps (for external audio)
+- your TTS provider's word-level output (default: ElevenLabs `with-timestamps`)
+- or your transcription provider's word timestamps (default: ElevenLabs Scribe)
 
 ### Grouping
 Convert word timestamps into readable subtitle chunks:
@@ -20,8 +20,8 @@ Convert word timestamps into readable subtitle chunks:
 - prefer phrase boundaries (punctuation) over fixed word counts
 
 ### Timing
-- A caption’s start = first word start
-- A caption’s end = last word end
+- A caption's start = first word start
+- A caption's end = last word end
 - Add small lead/lag padding only if needed (keep minimal)
 
 ### SRT format

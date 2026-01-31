@@ -22,8 +22,8 @@ Ask these in one message:
 1) **Length**: 30s / 45s / 60s?
 2) **Aspect ratio**: 16:9 or 9:16?
 3) **Voice**: narrator-only (default) or dialogue?
-4) **Characters**: names + 1–2 sentence vibe each (we’ll lock a canonical descriptor; see `rules/characters/character-descriptors.md`)
-5) **Music**: none (default) or background music? (optional; see `rules/music/elevenlabs.md`)
+4) **Characters**: names + 1–2 sentence vibe each (we’ll lock a canonical descriptor; see `rules/visuals/characters/character-descriptors.md`)
+5) **Music**: none (default) or background music? (optional; see `rules/providers/elevenlabs/music.md`)
 6) **Style**: pick a preset (cinematic / 3D animated / anime / 2D / photoreal)
 7) **Quality mode**: Draft (480p), Standard (720p), HQ (1080p)
 8) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you’ll save to `assets/refs/...`)
@@ -44,4 +44,4 @@ Once confirmed:
 7) Generate videos → trim → stitch locally
 
 Follow the canonical runbook:
-- `rules/runbook/end-to-end.md`
+- `rules/start/end-to-end.md`

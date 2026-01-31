@@ -11,6 +11,8 @@ metadata:
 This repo is **docs-first**: it does not ship a runnable pipeline.
 However, if you want to *execute* the workflow locally (generate media + render), you’ll need a few tools and credentials.
 
+Defaults assume the provider mapping in `rules/providers/defaults.md`. If you swap providers (e.g., Mire), substitute the equivalent keys below.
+
 ## 0) Capability matrix (what you want to do)
 
 | Capability | Needed | Notes |
@@ -54,8 +56,8 @@ Required if you want TTS or Scribe transcription:
 - `ELEVENLABS_API_KEY`
 
 Used by:
-- `rules/voiceover/elevenlabs.md`
-- `rules/transcription/elevenlabs-scribe.md`
+- `rules/providers/elevenlabs/voiceover.md`
+- `rules/providers/elevenlabs/transcription.md`
 
 ### fal (image + video generation)
 Required if you want to generate images/videos via fal:
@@ -63,7 +65,7 @@ Required if you want to generate images/videos via fal:
 - `FAL_API_KEY`
 
 Used by:
-- `rules/providers/fal.md`
+- `rules/providers/fal/overview.md`
 
 ## 3) What is intentionally *not* required here
 

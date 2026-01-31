@@ -13,14 +13,14 @@ Minimize "character drift" across shots.
 
 ### Strategy A (preferred): character sheet + references
 1) Generate a single **character sheet** image for each character.
-2) Use Seedream **edit** and include that reference in `image_urls` for every shot.
+2) Use an image model that supports reference images (default: Seedream **edit**) and include the reference for every shot.
 
 ### Strategy B (fallback): stable character descriptor string
 If you cannot use reference images (or the model/provider doesn’t support them):
 - create a **single canonical descriptor per character**
 - paste it into **every** prompt **verbatim** (do not paraphrase)
 
-See: `rules/characters/character-descriptors.md`
+See: `rules/visuals/characters/character-descriptors.md`
 
 Where to place it:
 - first **2–3 lines** of the prompt, before shot/setting detail

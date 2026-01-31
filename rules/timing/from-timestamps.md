@@ -11,8 +11,10 @@ metadata:
 Word count is only for planning. Final timing should come from **timestamps**.
 
 ### Preferred sources of timestamps
-1) **ElevenLabs TTS `with-timestamps`** (best when you generated the voiceover)
-2) **ElevenLabs Speech-to-Text (Scribe)** (best for external audio)
+1) **TTS provider word-level timestamps** (default: ElevenLabs `with-timestamps`)  
+   Best when you generated the voiceover.
+2) **Transcription provider word-level timestamps** (default: ElevenLabs Scribe)  
+   Best for external audio.
 
 ### Workflow
 1) Generate voiceover per script line (or per scene)
@@ -35,7 +37,7 @@ This is the default because it prevents run-on narration.
 However, it is **ignorable** if the user explicitly wants a different pacing style.
 
 If you concatenate voiced lines without padding, narration will feel rushed.
-See `rules/voiceover/pauses-and-roomtone.md` for a concrete implementation.
+See `rules/audio/pauses-and-roomtone.md` for a concrete implementation.
 
 ### Manifest update rule
 After timestamps exist, the agent should update the manifest:

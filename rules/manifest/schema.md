@@ -16,7 +16,7 @@ Agents should produce a single **MiniMovieManifest** JSON document that contains
 - **shotlist scenes** that reference script line IDs
 
 Canonical schema file:
-- `rules/schema/movie-manifest.schema.json`
+- `rules/manifest/movie-manifest.schema.json`
 
 ### Why a manifest?
 It becomes the single source of truth the agent can:
@@ -43,6 +43,8 @@ Use this for things like:
 - using a faster/cheaper model for non-critical shots
 
 ### Minimal manifest example
+
+Defaults below assume `rules/providers/defaults.md`. Swap providers/models as needed.
 
 ```json
 {
