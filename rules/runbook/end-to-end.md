@@ -67,6 +67,7 @@ The agent should end with:
 - `export/movie.mp4`
 - `export/manifest.json`
 - `export/captions.srt` (optional)
+- `export/movie_with_music.mp4` (optional)
 
 ---
 
@@ -185,6 +186,17 @@ See:
 
 See:
 - `rules/render/rendering.md`
+
+---
+
+## Step 5.5 — Music (optional)
+
+If the user wants background music, generate a music bed and mix it under the voiceover.
+
+Rule: Music is **optional by default** and must be **skipped** if the user asks for silence or maximum dialogue clarity.
+
+See:
+- `rules/music/elevenlabs.md`
 
 ---
 
