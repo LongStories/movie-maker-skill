@@ -22,7 +22,7 @@ Video:
 Why:
 - Lower cost and faster turnaround for drafts or high volume.
 
-### High Quality but Slower (default for quality)
+### High Quality, Expensive (default for quality)
 Image:
 - `fal-ai/bytedance/seedream/v4.5/text-to-image`
 - `fal-ai/bytedance/seedream/v4.5/edit` (if using reference images)

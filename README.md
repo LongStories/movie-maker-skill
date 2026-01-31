@@ -2,7 +2,7 @@
 
 Docs-first AgentSkill for generating 10-60s mini-movies locally.
 
-Built by LongStories, Inc.
+Built by Uri Riera (LongStories.ai founder).
 
 ## What this is
 
