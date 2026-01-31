@@ -21,7 +21,9 @@ Non-provider rules should remain provider-agnostic, with **one default mapping**
   See `rules/providers/fal/overview.md`
 - **Video:** fal (Seedance)  
   See `rules/providers/fal/overview.md`
-- **Music (optional):** ElevenLabs  
+- **Music (optional):** fal ElevenLabs Music (no ElevenLabs key needed)  
+  See `rules/providers/fal/overview.md`
+- **Alt music:** direct ElevenLabs Music (requires `ELEVENLABS_API_KEY`)  
   See `rules/providers/elevenlabs/music.md`
 - **Transcription:** ElevenLabs Scribe  
   See `rules/providers/elevenlabs/transcription.md`

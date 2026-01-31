@@ -63,9 +63,10 @@ Used by:
 - `rules/providers/elevenlabs/music.md`
 
 **Note:** If you use **fal Eleven v3 TTS** for voiceover, you do **not** need `ELEVENLABS_API_KEY` for narration.
+If you use **fal ElevenLabs Music**, you do **not** need `ELEVENLABS_API_KEY` for music.
 
-### fal (image + video generation, optional voiceover)
-Required if you want to generate images/videos via fal. Also supports voiceover via fal Eleven v3 TTS:
+### fal (image + video generation, optional voiceover and music)
+Required if you want to generate images/videos via fal. Also supports voiceover and music via fal ElevenLabs models:
 
 - `FAL_API_KEY`
 

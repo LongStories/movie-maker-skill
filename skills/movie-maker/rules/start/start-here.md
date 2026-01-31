@@ -20,7 +20,9 @@ You cannot generate assets without credentials. Before running the pipeline:
 - Voiceover can use:
   - **fal Eleven v3 TTS** (no ElevenLabs key needed), or
   - **Direct ElevenLabs** (requires `ELEVENLABS_API_KEY`).
-- Music (optional) requires **ELEVENLABS_API_KEY** (direct ElevenLabs).
+- Music can use:
+  - **fal ElevenLabs Music** (no ElevenLabs key needed), or
+  - **Direct ElevenLabs** (requires `ELEVENLABS_API_KEY`).
 
 If keys are missing, stop and ask the user to set them (or confirm they want a planning-only output).
 

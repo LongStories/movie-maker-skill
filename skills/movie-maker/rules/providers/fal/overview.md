@@ -25,6 +25,9 @@ Video:
 - `fal-ai/bytedance/seedance/v1.5/pro/image-to-video`
 - `fal-ai/bytedance/seedance/v1/pro/fast/image-to-video` (faster, cost-efficient)
 
+Music (via fal):
+- `fal-ai/elevenlabs/music`
+
 ### Pricing (fal UI)
 
 Prices can change; verify in the fal UI when budgeting.

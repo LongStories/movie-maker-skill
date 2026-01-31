@@ -18,7 +18,9 @@ Skip music if:
 - the pacing needs intentional uncomfortable silence
 
 ## Requirements
-- `ELEVENLABS_API_KEY`
+- `ELEVENLABS_API_KEY` (direct ElevenLabs only)
+
+If you want to avoid an ElevenLabs key, use fal ElevenLabs Music via `FAL_API_KEY`.
 
 See also:
 - `rules/start/requirements.md`
