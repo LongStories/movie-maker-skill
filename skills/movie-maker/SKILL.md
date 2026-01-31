@@ -1,5 +1,5 @@
 ---
-name: movie-maker-skill
+name: movie-maker
 description: Docs-first AgentSkill for generating 10-60s mini-movies locally. Provides rules for scripts, shotlists, timing, prompting, providers, rendering (ffmpeg/remotion), and sharing to clawtube.
 metadata:
   tags: ai, video, fal, elevenlabs, ffmpeg, remotion, voiceover

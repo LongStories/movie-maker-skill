@@ -17,29 +17,29 @@ This repo helps an agent produce:
 Install the skill into your agent workspace:
 
 ```
-npx skills add <this-repo> --skill movie-maker-skill
+npx skills add https://github.com/longstories/movie-maker-skill --skill movie-maker
 ```
 
 ## Quick start
 
-- Read `skills/movie-maker-skill/SKILL.md` (entrypoint)
-- Follow the intake and runbook in `skills/movie-maker-skill/rules/start/`
-- Use `skills/movie-maker-skill/rules/index.md` as the ordered discovery path
+- Read `skills/movie-maker/SKILL.md` (entrypoint)
+- Follow the intake and runbook in `skills/movie-maker/rules/start/`
+- Use `skills/movie-maker/rules/index.md` as the ordered discovery path
 
 ## What's included
 
-- `skills/movie-maker-skill/SKILL.md` - skill entrypoint and rules index
-- `skills/movie-maker-skill/rules/` - modular guidance (intake, planning, prompts, timing, providers, rendering)
-- `skills/movie-maker-skill/examples/` - sample script, shotlist, and manifest
+- `skills/movie-maker/SKILL.md` - skill entrypoint and rules index
+- `skills/movie-maker/rules/` - modular guidance (intake, planning, prompts, timing, providers, rendering)
+- `skills/movie-maker/examples/` - sample script, shotlist, and manifest
 
 ## Providers and pricing
 
-Provider-specific docs live under `skills/movie-maker-skill/rules/providers/`. Defaults are defined in:
-- `skills/movie-maker-skill/rules/providers/defaults.md`
-- `skills/movie-maker-skill/rules/providers/model-presets.md`
+Provider-specific docs live under `skills/movie-maker/rules/providers/`. Defaults are defined in:
+- `skills/movie-maker/rules/providers/defaults.md`
+- `skills/movie-maker/rules/providers/model-presets.md`
 
 For current pricing, see:
-- `skills/movie-maker-skill/rules/providers/pricing.md`
+- `skills/movie-maker/rules/providers/pricing.md`
 
 ## No pipeline
 
