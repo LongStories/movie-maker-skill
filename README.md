@@ -47,4 +47,4 @@ This repo does not include a runnable media pipeline. It assumes you will connec
 
 ---
 
-[LongStories.ai](https://longstories.ai) - make AI video stories and music videos.
+[LongStories.ai](https://longstories.ai) - Long AI video stories and music videos of up to 15 minutes.
