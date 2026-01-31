@@ -13,14 +13,14 @@ Video generation is the most expensive step. If your agent can see images (multi
 ### When to do this
 - Always for a first run
 - Always when you care about character consistency
-- Skip only if you’re doing a rapid cheap draft and are OK with throwaway results
+- Skip only if you're doing a rapid cheap draft and are OK with throwaway results
 
 ### How to review
 If the agent is multimodal:
 - open each generated image file and verify it matches the shot intent.
 
 If the agent is not multimodal:
-- ask the user to approve the images, or
+- ask the user to approve the images (use an "ask the user questions" tool if available), or
 - do a minimal heuristic check (file exists, dimensions, not blank), and proceed.
 
 ### Review checklist (per shot)
@@ -44,7 +44,7 @@ Modify the relevant fields in the manifest:
 
 ### Retry strategy
 - Regenerate the image only for the failing shot.
-- Keep `num_images=1` (don’t fan out) unless you’re stuck.
+- Keep `num_images=1` (don't fan out) unless you're stuck.
 - Cap retries: **max 3 attempts per shot**.
 
 ### Logging

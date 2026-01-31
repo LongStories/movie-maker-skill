@@ -19,6 +19,7 @@ This repo is **docs-first**: it ships guidance (rules + schemas), not an executa
 
 ### Rule: ask questions unless explicitly told not to
 Unless the user explicitly says *"don't ask questions"*, you MUST do an intake and WAIT for answers (or explicit confirmation of defaults) before generating media.
+If your agent environment provides an "ask the user questions" tool, use it for the intake and any clarifying questions.
 
 ### Intake (copy/paste)
 Ask these in one message:

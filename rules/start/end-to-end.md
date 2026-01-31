@@ -82,6 +82,7 @@ The agent should end with:
 
 Use the canonical intake template:
 - `rules/start/start-here.md`
+If your agent environment provides an "ask the user questions" tool, use it for the intake and any clarifying questions.
 
 ## Step 0 — Write script + shotlist
 
@@ -120,7 +121,7 @@ See:
 
 Concatenate per-line audio to make a single `tts/voiceover.mp3` (recommended for final mux).
 
-**Important:** add pauses/room tone between voiced lines so pacing doesn’t feel rushed.
+**Important:** add pauses/room tone between voiced lines so pacing doesn't feel rushed.
 See:
 - `rules/audio/pauses-and-roomtone.md`
 
@@ -130,7 +131,7 @@ See:
 
 1) Use timestamps to compute per-line timing (start/end).
 2) Compute scene duration from referenced lines + small padding.
-3) Choose each shot’s `plannedDurationSeconds`.
+3) Choose each shot's `plannedDurationSeconds`.
 
 If the video model requires durations (e.g. 4–12s):
 - set `generateDurationSeconds` to a supported value
@@ -157,7 +158,7 @@ See:
 Before generating any videos, do a quick QA pass on the images.
 If the agent is multimodal, it should visually inspect each image.
 
-If an image doesn’t match the intent:
+If an image doesn't match the intent:
 - update the manifest (`shot.imagePrompt` and/or character/style fields)
 - regenerate **only** that image
 
