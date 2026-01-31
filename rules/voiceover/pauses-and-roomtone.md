@@ -6,9 +6,16 @@ metadata:
   tags: voiceover, pauses, pacing, ffmpeg
 ---
 
-## Voiceover pacing: pauses + room tone (do not skip)
+## Voiceover pacing: pauses + room tone (default)
 
 If you concatenate voice lines back-to-back, the narration will feel rushed.
+
+### Creative override (this rule is ignorable)
+Skip or alter pauses if the user explicitly wants a different feel, e.g.
+- rapid-fire dialogue
+- intentional run-on narration
+- uncomfortable silence / no room tone
+- comedic timing that requires tight cuts
 
 ### Default rule
 - Add **0.25s of silence after every voiced line**.

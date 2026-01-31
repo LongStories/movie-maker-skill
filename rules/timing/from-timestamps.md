@@ -26,10 +26,13 @@ Word count is only for planning. Final timing should come from **timestamps**.
    - If the video model requires durations (e.g. 4–12s), clamp with `generateDurationSeconds`
    - If a beat is shorter (e.g. 2s), generate minimum and trim (see `clamp-and-trim.md`)
 
-### Padding rule (do not skip)
+### Padding rule (default)
 Add small padding for breath/room tone:
 - **+0.25s after each voiced line** (default)
 - and/or **+0.5s at scene boundaries**
+
+This is the default because it prevents run-on narration.
+However, it is **ignorable** if the user explicitly wants a different pacing style.
 
 If you concatenate voiced lines without padding, narration will feel rushed.
 See `rules/voiceover/pauses-and-roomtone.md` for a concrete implementation.

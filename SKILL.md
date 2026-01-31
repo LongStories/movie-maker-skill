@@ -60,6 +60,9 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 ### Captions
 - [rules/captions/srt.md](rules/captions/srt.md)
 
+### Music (optional)
+- [rules/music/elevenlabs.md](rules/music/elevenlabs.md)
+
 ### Rendering
 - [rules/render/rendering.md](rules/render/rendering.md)
 
