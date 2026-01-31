@@ -28,6 +28,7 @@ Video:
 ### Pricing (fal UI)
 
 Prices can change; verify in the fal UI when budgeting.
+For the latest rates, see `rules/providers/pricing.md`.
 
 Image models:
 - Seedream 4.5 text-to-image: **$0.04 per image**

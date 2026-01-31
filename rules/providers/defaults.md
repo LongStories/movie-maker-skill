@@ -27,6 +27,9 @@ Non-provider rules should remain provider-agnostic, with **one default mapping**
 Model combos (image + video) are defined in:
 - `rules/providers/model-presets.md`
 
+Pricing lookup:
+- `rules/providers/pricing.md`
+
 ## Switching providers (e.g., Mire)
 
 1) Add docs under `rules/providers/<provider>/`.

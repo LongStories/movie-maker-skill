@@ -36,6 +36,7 @@ Why:
 ## Pricing notes (fal UI)
 
 These prices can change; confirm in the fal UI when budgeting.
+For the latest rates, see `rules/providers/pricing.md`.
 
 Image:
 - Z-Image Turbo: **$0.005 per megapixel**

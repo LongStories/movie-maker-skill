@@ -8,6 +8,17 @@ metadata:
 # Movie Maker Skill
 
 This repo is **docs-first**: it ships guidance (rules + schemas), not an executable pipeline.
+This is a skill created with LongStories.ai Skill SEO Audit.
+
+## When to use this skill
+
+Use this skill when a user wants a 10-60s mini-movie with a script, shotlist, and render-ready manifest.
+
+## What this skill does NOT do
+
+- Does not include a runnable pipeline
+- Does not store or upload media
+- Does not include provider keys or secrets
 
 ## What the agent should produce
 
@@ -17,43 +28,45 @@ This repo is **docs-first**: it ships guidance (rules + schemas), not an executa
 
 ## Start here (MUST do intake)
 
-### Rule: ask questions unless explicitly told not to
-Unless the user explicitly says *"don't ask questions"*, you MUST do an intake and WAIT for answers (or explicit confirmation of defaults) before generating media.
-If your agent environment provides an "ask the user questions" tool, use it for the intake and any clarifying questions.
+Read and follow: `rules/start/start-here.md`
+Full runbook: `rules/start/end-to-end.md`
 
-### Intake (copy/paste)
-Ask these in one message:
+## Intake (copy/paste)
+
+Ask these in one message (use an "ask the user questions" tool if available):
 
 1) **Length**: 30s / 45s / 60s?
 2) **Aspect ratio**: 16:9 or 9:16?
 3) **Voice**: narrator-only (default) or dialogue?
-4) **Characters**: names + 1-2 sentence vibe each (we'll lock a canonical descriptor)
+4) **Characters**: names + 1-2 sentence vibe each (we will lock a canonical descriptor)
 5) **Music**: none (default) or background music?
 6) **Style**: pick a preset (cinematic / 3D animated / anime / 2D / photoreal)
 7) **Quality mode**: Draft (480p), Standard (720p), HQ (1080p)
 8) **Model preset**: Cheap and Fast (Z-Image Turbo + Seedance v1 fast) or High Quality but Slower (Seedream 4.5 + Seedance 1.5 pro)
-9) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you'll save to `assets/refs/...`)
+9) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you will save to `assets/refs/...`)
 
-If the user doesn't answer, propose defaults and ask:
+If the user does not answer, propose defaults and ask:
 
 > "If I don't hear back, I'll do 30s, 16:9, narrator-only, 3D animated style, Draft (480p), High Quality but Slower preset. Confirm?"
-
-### Execute after confirmation
-1) Create a fresh run dir
-2) Create numbered `script.txt` + `shotlist.txt`
-3) Build `manifest.json` (validate against schema)
-4) Generate voiceover per line (preferred)
-5) Compute timings -> planned durations -> generate durations -> trims
-6) Generate images -> QA images (fix prompts and retry if needed)
-7) Generate videos -> trim -> stitch locally
-
-Full runbook: `rules/start/end-to-end.md`
 
 ## Core pipeline (voiceover-first)
 
 ```text
 Script -> Voiceover timing -> Finalize shot durations -> Generate images -> Generate videos -> Render locally -> Share
 ```
+
+## Model presets (image + video combo)
+
+See: `rules/providers/model-presets.md`
+
+Quick summary:
+- **Cheap and Fast**: Z-Image Turbo + Seedance v1 fast
+- **High Quality but Slower**: Seedream 4.5 + Seedance 1.5 pro
+
+## Pricing verification
+
+Prices change. Use the fal pricing endpoint in:
+- `rules/providers/pricing.md`
 
 ## Rules index
 
