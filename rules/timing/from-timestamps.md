@@ -26,10 +26,13 @@ Word count is only for planning. Final timing should come from **timestamps**.
    - If the video model requires durations (e.g. 4–12s), clamp with `generateDurationSeconds`
    - If a beat is shorter (e.g. 2s), generate minimum and trim (see `clamp-and-trim.md`)
 
-### Padding rule
+### Padding rule (do not skip)
 Add small padding for breath/room tone:
-- +0.2s per line (default)
-- or +0.5s per scene
+- **+0.25s after each voiced line** (default)
+- and/or **+0.5s at scene boundaries**
+
+If you concatenate voiced lines without padding, narration will feel rushed.
+See `rules/voiceover/pauses-and-roomtone.md` for a concrete implementation.
 
 ### Manifest update rule
 After timestamps exist, the agent should update the manifest:

@@ -54,6 +54,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 - [rules/providers/fal-api.md](rules/providers/fal-api.md)
 - [rules/voiceover/elevenlabs.md](rules/voiceover/elevenlabs.md)
 - [rules/voiceover/fal-elevenlabs.md](rules/voiceover/fal-elevenlabs.md) (makes ElevenLabs optional)
+- [rules/voiceover/pauses-and-roomtone.md](rules/voiceover/pauses-and-roomtone.md)
 - [rules/transcription/elevenlabs-scribe.md](rules/transcription/elevenlabs-scribe.md)
 
 ### Captions

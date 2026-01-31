@@ -25,13 +25,15 @@ If the agent is not multimodal:
 
 ### Review checklist (per shot)
 Confirm:
-1) **Shot type** matches (OTS/CU/WS/etc.)
-2) **Subject** is correct (right character, count of characters)
-3) **Setting** matches (location + time-of-day)
-4) **Continuity** (same character clothing/hair/age across scenes)
-5) **No unwanted text/logos** (unless explicitly requested)
-6) **No obvious artifacts** (extra limbs, mangled hands/faces)
-7) **Composition** supports the lineRefs (the spoken beat)
+1) **Intent** is reflected (the image matches what this beat is trying to communicate)
+2) **Character look** is as expected (face/body/clothes match your mental model)
+3) **Shot type** matches (OTS/CU/WS/etc.)
+4) **Subject** is correct (right character, count of characters)
+5) **Setting** matches (location + time-of-day)
+6) **Continuity** (same character clothing/hair/age across scenes)
+7) **No unwanted text/logos** (unless explicitly requested)
+8) **No obvious artifacts** (extra limbs, mangled hands/faces)
+9) **Composition** supports the lineRefs (the spoken beat)
 
 ### If it fails: what to change
 Modify the relevant fields in the manifest:

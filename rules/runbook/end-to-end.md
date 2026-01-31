@@ -114,7 +114,11 @@ For each line where `kind` is `dialogue` or `voiceover`:
 See:
 - `rules/timing/map-lines-to-timestamps.md`
 
-Concatenate per-line mp3s to make a single `tts/voiceover.mp3` (recommended for final mux).
+Concatenate per-line audio to make a single `tts/voiceover.mp3` (recommended for final mux).
+
+**Important:** add pauses/room tone between voiced lines so pacing doesn’t feel rushed.
+See:
+- `rules/voiceover/pauses-and-roomtone.md`
 
 ---
 
