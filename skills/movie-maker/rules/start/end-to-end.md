@@ -14,10 +14,12 @@ This repo does **not** ship an executable pipeline. This runbook is the canonica
 
 #### API keys
 Defaults require:
-- `FAL_API_KEY` (fal)
-- `ELEVENLABS_API_KEY` (optional if using direct ElevenLabs; not required if using fal Eleven v3 TTS)
+- `FAL_API_KEY` (fal, required for images/video)
+- `ELEVENLABS_API_KEY` (optional if using direct ElevenLabs voiceover or music)
 
 If you swap providers, update this list based on `rules/providers/defaults.md`.
+
+**Stop if missing:** If `FAL_API_KEY` is not set, you cannot generate images or videos. Ask the user to set it or confirm a planning-only output.
 
 How to get keys:
 - fal: https://fal.ai/

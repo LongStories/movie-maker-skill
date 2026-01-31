@@ -13,7 +13,9 @@ Non-provider rules should remain provider-agnostic, with **one default mapping**
 
 ## Default mapping (current)
 
-- **Voiceover:** ElevenLabs direct API  
+- **Voiceover:** fal Eleven v3 TTS (no ElevenLabs key needed)  
+  See `rules/providers/fal/voiceover-elevenlabs.md`
+- **Alt voiceover:** direct ElevenLabs API (requires `ELEVENLABS_API_KEY`)  
   See `rules/providers/elevenlabs/voiceover.md`
 - **Image:** fal (Seedream)  
   See `rules/providers/fal/overview.md`

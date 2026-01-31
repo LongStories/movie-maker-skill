@@ -58,5 +58,6 @@ curl -L "$AUDIO_URL" -o line_L001.mp3
 ```
 
 ### Voice selection
-The fal Eleven v3 model takes a `voice` string (e.g. "Rachel", "Aria").
+The fal Eleven v3 model takes a `voice` **name string** (e.g. "Rachel", "Aria").
+It does **not** use ElevenLabs voice IDs.
 Pick a narrator voice and keep it stable across the whole movie.

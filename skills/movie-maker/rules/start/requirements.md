@@ -13,6 +13,8 @@ However, if you want to *execute* the workflow locally (generate media + render)
 
 Defaults assume the provider mapping in `rules/providers/defaults.md`. If you swap providers (e.g., Mire), substitute the equivalent keys below.
 
+**Minimum requirement:** `FAL_API_KEY` is required to generate images and videos. Without it, you can only produce planning artifacts (script, shotlist, manifest).
+
 ## 0) Capability matrix (what you want to do)
 
 | Capability | Needed | Notes |
@@ -50,22 +52,26 @@ node -v
 
 ## 2) Environment variables (by provider)
 
-### ElevenLabs (voiceover + timestamps)
-Required if you want TTS or Scribe transcription:
+### ElevenLabs (voiceover + music + transcription)
+Required if you want **direct** ElevenLabs voiceover, music, or Scribe transcription:
 
 - `ELEVENLABS_API_KEY`
 
 Used by:
 - `rules/providers/elevenlabs/voiceover.md`
 - `rules/providers/elevenlabs/transcription.md`
+- `rules/providers/elevenlabs/music.md`
 
-### fal (image + video generation)
-Required if you want to generate images/videos via fal:
+**Note:** If you use **fal Eleven v3 TTS** for voiceover, you do **not** need `ELEVENLABS_API_KEY` for narration.
+
+### fal (image + video generation, optional voiceover)
+Required if you want to generate images/videos via fal. Also supports voiceover via fal Eleven v3 TTS:
 
 - `FAL_API_KEY`
 
 Used by:
 - `rules/providers/fal/overview.md`
+- `rules/providers/fal/voiceover-elevenlabs.md`
 
 ## 3) What is intentionally *not* required here
 
