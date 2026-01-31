@@ -17,14 +17,13 @@ Minimize "character drift" across shots.
 
 ### Strategy B (fallback): stable character descriptor string
 If you cannot use reference images (or the model/provider doesn’t support them):
-- create a single canonical descriptor per character
-- paste it into **every** prompt (near the top)
+- create a **single canonical descriptor per character**
+- paste it into **every** prompt **verbatim** (do not paraphrase)
 
-Example descriptor (Alex):
-"Alex: young adult, tired eyes, dark hoodie, short dark hair, faint stubble, slightly hunched posture"
+See: `rules/characters/character-descriptors.md`
 
 Where to place it:
-- first 1–2 lines of the prompt, before shot/setting detail
+- first **2–3 lines** of the prompt, before shot/setting detail
 
 ### Rule
 Never re-describe a character differently across shots (hair, age, clothing). If you change clothing, make it an explicit story beat.

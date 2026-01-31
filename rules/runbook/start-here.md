@@ -22,9 +22,10 @@ Ask these in one message:
 1) **Length**: 30s / 45s / 60s?
 2) **Aspect ratio**: 16:9 or 9:16?
 3) **Voice**: narrator-only (default) or dialogue?
-4) **Style**: pick a preset (cinematic / 3D animated / anime / 2D / photoreal)
-5) **Quality mode**: Draft (480p), Standard (720p), HQ (1080p)
-6) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you’ll save to `assets/refs/...`)
+4) **Characters**: names + 1–2 sentence vibe each (we’ll lock a canonical descriptor; see `rules/characters/character-descriptors.md`)
+5) **Style**: pick a preset (cinematic / 3D animated / anime / 2D / photoreal)
+6) **Quality mode**: Draft (480p), Standard (720p), HQ (1080p)
+7) **Reference images**: any character/style refs? (if yes, ask user to paste/attach and say you’ll save to `assets/refs/...`)
 
 If the user doesn’t answer, propose defaults and ask:
 

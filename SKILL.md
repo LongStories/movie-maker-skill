@@ -44,6 +44,7 @@ Script → Voiceover timing → Finalize shot durations → Generate images → 
 - [rules/image/prompting.md](rules/image/prompting.md)
 - [rules/video/prompting.md](rules/video/prompting.md)
 - [rules/style/style-presets.md](rules/style/style-presets.md)
+- [rules/characters/character-descriptors.md](rules/characters/character-descriptors.md)
 - [rules/characters/consistency.md](rules/characters/consistency.md)
 
 ### Cost/quality
